@@ -1,0 +1,59 @@
+<div [dir]="getDirection()">
+    
+<button  (click)="makePDF()">{{ 'Download' | translate }}</button>
+
+<h2> {{ 'Transactions list' | translate }} </h2>
+<button (click)="navigateToCreateTransactionInterface()" class = "btn btn-info" style="margin-left: 10px">{{ 'Add' | translate }}</button>
+
+<div  class="container" >
+    <h2>{{ 'Search filter' | translate }}</h2>
+<br/>
+<input type="text" placeholder="{{ 'Search Table Transaction' | translate }}" class="form-control"[(ngModel)]="searchtext"/>
+<br/>
+       
+  </div> 
+  <div id="content" #content>
+  
+
+<table   id="content" #content  class = "table table-striped">
+    <thead>
+        <tr>
+            <th> {{ 'Transaction type' | translate }} </th>
+            <th> {{ 'Product' | translate }} </th>
+            <th> {{ 'Client' | translate }} </th>
+            <th> {{ 'Payment method' | translate }}</th>
+            <th> {{ 'Amount' | translate }} </th>
+            <th> {{ 'Transaction status' | translate }} </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let transaction of transactions | filter:searchtext" >
+            <td> {{ transaction.typeTransaction}} </td>
+            <td> {{ transaction.produit }} </td>
+            <td> {{ transaction.client }} </td>
+            <td> {{ transaction.methodePaiement}} </td>
+            <td> {{ transaction.montant}} </td>
+            <td> {{ transaction.statutTransaction }} </td>
+            <td class="exclude-from-pdf">
+                <button (click)="updateTransaction(transaction.id_Transaction)"class= "btn btn-info">{{ 'Update' | translate }}</button>
+                <button  (click)="selectedTransactionId = transaction.id_Transaction; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
+                <button (click)="detailsTransaction(transaction.id_Transaction)"class = "btn btn-info" style="margin-left: 10px">{{ 'View' | translate }}</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+</div>
+<div *ngIf="isVisible" class="delete-modal">
+    <div class="delete-modal-content">
+      <h3>{{'Are you sure you want to delete this transaction ?' | translate}}</h3>
+      <div class="delete-buttons">
+        <button (click)="deleteTransaction(selectedTransactionId)"  id="delete-yes">{{'Yes' | translate}}</button>
+        <button (click)="hideDialog()"id="delete-no">{{'No' | translate}}</button>
+      </div>
+    </div>
+</div>
+
+  
+
+

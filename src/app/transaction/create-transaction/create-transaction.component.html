@@ -1,0 +1,59 @@
+
+<div class ="col-md-6 offset-md-3">
+    <h3>{{ 'Create Transaction' | translate }} </h3>
+  <form (ngSubmit)="onSubmit()">
+
+    <label for="name">{{ 'Transaction type' | translate }}</label>
+    <br>
+    <select (change)="onChangeTransactionType($event)">
+      <option value="non_selectioner">{{ 'Unselected' | translate }}</option>
+      <option value="vente_integre">{{ 'Integrated sale' | translate }}</option>
+      <option value="services">{{ 'Services' | translate }}</option>
+      <option value="service_apre_vente">{{ 'After-sales service' | translate }}</option>
+    </select>
+    <br>
+    <br>
+
+    <div class="form-group">
+        <label for="name">{{ 'Product' | translate }}</label>
+        <input type="text" class="form-control" id="produit" required [(ngModel)]="transaction.produit" name="produit">
+      </div>
+
+      <div class="form-group">
+        <label for="name">{{ 'Client' | translate }}</label>
+        <input type="text" class="form-control" id="client" required [(ngModel)]="transaction.client" name="Client">
+      </div>
+
+      
+        <label for="name">{{ 'Payment method' | translate }}</label>
+        <br>
+        <select (change)="onChangeMethodePaiement($event)">
+          <option value="CarteCredit">{{ 'Credit card' | translate }}</option>
+          <option value="PayPal">{{ 'PayPal' | translate }}</option>
+          <option value="Virement_bancaire">{{ 'Bank transfer' | translate }}</option>
+          <option value="Especes">{{ 'Cash' | translate }}</option>
+        </select>
+      
+
+      <div class="form-group">
+        <label for="name">{{ 'Amount' | translate }}</label>
+        <input type="text" class="form-control" id="montant" required [(ngModel)]="transaction.montant" name="montant">
+      </div>
+
+      
+        <label for="name">{{ 'Transaction status' | translate }} </label>
+        <br>
+        <select (change)="onChangeStatutTransaction($event)">
+          <option value="encours">{{ 'Current' | translate }}</option>
+          <option value="payee">{{ 'Paid' | translate }}</option>
+          <option value="annulee">{{ 'Canceled' | translate }}</option>
+          <option value="remboursee">{{ 'Refunded' | translate }}</option>
+        </select>
+        <br>
+        <br>
+
+    
+
+    <button type="submit" class="btn btn-success">{{ 'Submit' | translate }}</button>
+  </form>
+</div>

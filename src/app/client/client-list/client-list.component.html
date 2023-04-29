@@ -1,0 +1,53 @@
+<button  (click)="makePDF()">{{ 'Download' | translate }}</button>
+<h2 > {{ 'Clients list' | translate }} </h2>
+<button (click)="navigateToCreateClientInterface()" class = "btn btn-info" style="margin-left: 10px"> {{ 'Add' | translate }}</button>
+<div class="container">
+    <h2>{{ 'Search filter' | translate }}</h2>
+<br/>
+<input type="text" placeholder="{{ 'Search Table Client' | translate }}"class="form-control"[(ngModel)]="searchtext"/>
+<br/>
+       
+  </div>
+
+  <div id="content" #content>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> {{ 'Salutation' | translate }}</th>
+            <th> {{ 'Name' | translate }}</th>
+            <th> {{ 'Date of birth' | translate }}</th>
+            <th> {{ 'Telephone' | translate }} </th>
+            <th> {{ 'Email' | translate }}</th>
+            <th> {{ 'Company' | translate }}</th>
+            <th> {{ 'Commentary' | translate }}</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let client of clients | filter:searchtext" >
+            <td> {{ client.salutation }} </td>
+            <td> {{ client.nom }} </td>
+            <td> {{ client.date_naissance }} </td>
+            <td> {{ client.num_telephone }} </td>
+            <td> {{ client.email }} </td>
+            <td> {{ client.entreprise}} </td>
+            <td> {{ client.commentaire}} </td>
+            
+            <td class="exclude-from-pdf">
+                <button (click)="updateClient(client.id_Client)"class= "btn btn-info">{{ 'Update' | translate }}</button>
+                <button (click)="selectedClientId = client.id_Client; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
+                <button (click)="detailsClient(client.id_Client)"class = "btn btn-info" style="margin-left: 10px"> {{ 'View' | translate }}</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>
+<div *ngIf="isVisible" class="delete-modal">
+    <div class="delete-modal-content">
+      <h3>{{'Are you sure you want to delete this client ?'| translate}}</h3>
+      <div class="delete-buttons">
+        <button (click)="deleteClient(selectedClientId)"  id="delete-yes">{{'Yes'|translate}}</button>
+        <button (click)="hideDialog()"id="delete-no">{{'No'| translate}}</button>
+      </div>
+    </div>
+  </div>
