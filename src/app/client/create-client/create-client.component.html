@@ -1,15 +1,22 @@
 
 <div class ="col-md-6 offset-md-3">
-    <h3>{{ 'Create client' | translate }}</h3>
+    <h1 style="font-size: 200%; width: 150%; margin-top: 50px;">{{ 'Create client' | translate }} </h1>
   <form (ngSubmit)="onSubmit()">
     <label for="name">{{ 'Salutation' | translate }}</label>
     <br>
-    <select (change)="onChangeSalutationClient($event)">
-      <option value="Mr">{{ 'Mr' | translate }}</option>
-      <option value="Mme">{{ 'Mrs' | translate }}</option>
-      <option value="Mlle">{{ 'Miss' | translate }}</option>
-      <option value="Dr">{{ 'Dr' | translate }}</option>
-    </select>
+
+    <div class="input-group">
+      <span class="input-group-text"><i class="bi bi-bookmarks-fill fs-4"></i></span>
+      <div class="flex-grow-1">
+          <select (change)="onChangeSalutationClient($event)" class="form-select rounded-start-0" data-control="select2" data-placeholder="Select a salutation">
+            <option value="Mr">{{ 'Mr' | translate }}</option>
+            <option value="Mme">{{ 'Mrs' | translate }}</option>
+            <option value="Mlle">{{ 'Miss' | translate }}</option>
+            <option value="Dr">{{ 'Dr' | translate }}</option>
+          </select>
+      </div>
+  </div> 
+  <br>
 
     <div class="form-group">
       <label for="name">{{ 'Name' | translate }}</label>

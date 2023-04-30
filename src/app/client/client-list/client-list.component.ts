@@ -6,6 +6,7 @@ import { CommonModule } from '@angular/common';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import { position } from 'html2canvas/dist/types/css/property-descriptors/position';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-client-list',
@@ -27,6 +28,7 @@ export class ClientListComponent {
   size:any;
 
   constructor(private clientService: ClientService,
+    public translateService: TranslateService,
     private router: Router) {this.title='search' , 
     this.titre="generate PDF"}
 
@@ -130,6 +132,14 @@ navigateToCreateClientInterface(){
 
   });
 
+}
+
+getDirection() {
+  if (this.translateService.currentLang === 'ar-AR') {
+    return 'rtl'; 
+  } else {
+    return 'ltr'; 
+  }
 }
 
 
