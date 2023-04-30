@@ -154,4 +154,5 @@ getDirection() {
     return 'ltr'; 
   }
 }
+
 }

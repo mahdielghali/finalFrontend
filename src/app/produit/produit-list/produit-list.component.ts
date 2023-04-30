@@ -5,6 +5,7 @@ import html2canvas from 'html2canvas';
 import { ProduitService } from 'src/app/_services/produit.service';
 import { Produit } from 'src/app/models/Produit';
 import { jsPDF } from "jspdf";
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-produit-list',
@@ -24,6 +25,7 @@ export class ProduitListComponent {
   size:any;
 
   constructor(private produitService: ProduitService,
+    public translateService: TranslateService,
     private router: Router) {this.title='search' , 
     this.titre="generate PDF"}
 
@@ -128,6 +130,14 @@ makePDF() {
 
   });
 
+}
+
+getDirection() {
+  if (this.translateService.currentLang === 'ar-AR') {
+    return 'rtl'; 
+  } else {
+    return 'ltr'; 
+  }
 }
 
 }
