@@ -57,8 +57,8 @@
             <td> {{ transaction.montant}} </td>
             <td> {{ transaction.statutTransaction }} </td>
             <td class="exclude-from-pdf">
-                <button (click)="updateTransaction(transaction.id_Transaction)"class= "btn btn-info">{{ 'Update' | translate }}</button>
-                <button (click)="detailsTransaction(transaction.id_Transaction)"class = "btn btn-info" style="margin-left: 10px">{{ 'View' | translate }}</button>
+                <button (click)="updateTransaction(transaction.id_Transaction)"class= "btn btn-primary">{{ 'Update' | translate }}</button>
+                <button (click)="detailsTransaction(transaction.id_Transaction)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
                 <button  (click)="selectedTransactionId = transaction.id_Transaction; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
             </td>
         </tr>

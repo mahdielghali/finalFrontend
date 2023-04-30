@@ -57,8 +57,8 @@
             
             
             <td class="exclude-from-pdf">
-                <button (click)="UpdateProduit(produit.id_Produit)" class = "btn btn-info">{{ 'Update' | translate }}</button>
-                <button (click)="detailsProduit(produit.id_Produit)"class = "btn btn-info" style="margin-left: 10px">{{ 'View' | translate }}</button>
+                <button (click)="UpdateProduit(produit.id_Produit)" class = "btn btn-primary">{{ 'Update' | translate }}</button>
+                <button (click)="detailsProduit(produit.id_Produit)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
                 <button (click)="selectedProduitId =produit.id_Produit; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
             </td>
         </tr>

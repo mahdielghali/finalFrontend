@@ -57,9 +57,10 @@
             <td> {{ client.commentaire}} </td>
             
             <td class="exclude-from-pdf">
-                <button (click)="updateClient(client.id_Client)"class= "btn btn-info">{{ 'Update' | translate }}</button>
+                <button (click)="updateClient(client.id_Client)"class= "btn btn-primary">{{ 'Update' | translate }}</button>
+                <button (click)="detailsClient(client.id_Client)" type="button" class="btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
                 <button (click)="selectedClientId = client.id_Client; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
-                <button (click)="detailsClient(client.id_Client)"class = "btn btn-info" style="margin-left: 10px"> {{ 'View' | translate }}</button>
+                
             </td>
         </tr>
     </tbody>
