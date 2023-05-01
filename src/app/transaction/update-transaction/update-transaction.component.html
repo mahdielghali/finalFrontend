@@ -23,6 +23,7 @@
       <label for="name">{{ 'Product' | translate }}</label>
       <input type="text" class="form-control" id="produit" required [(ngModel)]="transaction.produit" name="produit">
     </div>
+    
 
     <div class="form-group">
       <label for="name">{{ 'Client' | translate }}</label>
@@ -59,9 +60,9 @@
         <div class="flex-grow-1">
             <select (change)="onChangeStatutTransaction($event)" class="form-select rounded-start-0" data-control="select2" data-placeholder="Select an option">
               <option value="encours">{{ 'Current' | translate }}</option>
-        <option value="payee">{{ 'Paid' | translate }}</option>
-        <option value="annulee">{{ 'Canceled' | translate }}</option>
-        <option value="remboursee">{{ 'Refunded' | translate }}</option>
+              <option value="payee">{{ 'Paid' | translate }}</option>
+              <option value="annulee">{{ 'Canceled' | translate }}</option>
+              <option value="remboursee">{{ 'Refunded' | translate }}</option>
             </select>
         </div>
     </div>

@@ -57,9 +57,9 @@
             
             
             <td class="exclude-from-pdf">
-                <button (click)="UpdateProduit(produit.id_Produit)" class = "btn btn-primary">{{ 'Update' | translate }}</button>
-                <button (click)="detailsProduit(produit.id_Produit)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
-                <button (click)="selectedProduitId =produit.id_Produit; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
+                <button (click)="UpdateProduit(produit.id_Produit)" class = "btn btn-success">{{ 'Update' | translate }}</button>
+                <button class="my-button" (click)="detailsProduit(produit.id_Produit)"class = "btn btn-primary" style="margin-left: 10px">{{ 'View' | translate }}</button>
+                <button class="my-button" (click)="selectedProduitId =produit.id_Produit; showDialog()" class = "btn btn-danger" style="margin-left: 10px">{{ 'Delete' | translate }}</button>
             </td>
         </tr>
     </tbody>
@@ -67,10 +67,10 @@
 </div>
 <div *ngIf="isVisible" class="delete-modal">
     <div class="delete-modal-content">
-      <h3>{{'Are you sure you want to delete this product?'| translate}}</h3>
+      <h3>{{'Are you sure you want to delete this produit ?'| translate}}</h3>
       <div class="delete-buttons">
-        <button (click)="deleteProduit(selectedProduitId)"  id="delete-yes">{{'Yes'| translate}}</button>
-        <button (click)="hideDialog()"id="delete-no">{{'No'| translate}}</button>
+        <button class="my-button"(click)="deleteProduit(selectedProduitId)"  id="delete-yes">{{'Yes'|translate}}</button>
+        <button class="my-button" (click)="hideDialog()"id="delete-no">{{'No'| translate}}</button>
       </div>
     </div>
   </div>
