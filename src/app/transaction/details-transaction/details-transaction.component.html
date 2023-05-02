@@ -1,3 +1,4 @@
+<button (click)="navigateToBackToList()"class= "btn btn-white float-end justify-content-start" >{{ 'Back To List' | translate }}</button>
 <h3>{{ 'Transaction details' | translate }}</h3>
  <div>
     <div>
@@ -30,4 +31,10 @@
         
       </div>
 
+      <div>
+        <label><b>{{ 'Date added: ' | translate }} </b></label>{{transaction.date_ajout}}
+        
+      </div>
+
  </div> 
+ 

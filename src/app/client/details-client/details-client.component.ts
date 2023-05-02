@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ClientService } from 'src/app/_services/client.service';
 import { Client } from 'src/app/models/Client';
 
@@ -13,6 +13,7 @@ export class DetailsClientComponent implements OnInit{
   id:any
   client:any
   constructor(private route:ActivatedRoute, 
+    private router: Router,
     private clientService: ClientService){
 
   }
@@ -24,6 +25,10 @@ export class DetailsClientComponent implements OnInit{
     });
       
   }
+
+  navigateToBackToList(){
+    this.router.navigate(['produits']);
+   }
 
 
 }

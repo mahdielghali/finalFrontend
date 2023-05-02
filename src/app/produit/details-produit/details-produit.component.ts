@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { ProduitService } from 'src/app/_services/produit.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class DetailsProduitComponent {
   id:any
   produit:any
   constructor(private route:ActivatedRoute,
+    private router:Router,
      private produitService: ProduitService){
 
   }
@@ -22,5 +23,9 @@ export class DetailsProduitComponent {
     });
       
   }
+
+  navigateToBackToList(){
+    this.router.navigate(['produits']);
+   }
 
 }

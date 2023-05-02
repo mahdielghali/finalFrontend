@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { TransactionService } from 'src/app/_services/transaction.service';
 
 @Component({
@@ -11,6 +11,7 @@ export class DetailsTransactionComponent implements OnInit{
   id:any
   transaction:any
   constructor(private route:ActivatedRoute,
+    private router: Router,
      private transactionService: TransactionService){
 
   }
@@ -22,5 +23,9 @@ export class DetailsTransactionComponent implements OnInit{
     });
       
   }
+
+  navigateToBackToList(){
+    this.router.navigate(['transactions']);
+   }
 
 }

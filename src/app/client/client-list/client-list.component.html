@@ -12,7 +12,7 @@
         </span>
         {{ 'Download' | translate }}</button>
 
-<h1 style="font-size: 200%; width: 150%; margin-top: 50px;"> {{ 'Client list' | translate }} </h1>
+<h1 style="font-size: 200%; width: 150%; margin-top: 20px;"> {{ 'Client list' | translate }} </h1>
 <br>
 <button (click)="navigateToCreateClientInterface()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
     
@@ -42,7 +42,7 @@
         <th> {{ 'Telephone' | translate }} </th>
         <th> {{ 'Email' | translate }}</th>
         <th> {{ 'Company' | translate }}</th>
-        <th> {{ 'Commentary' | translate }}</th>
+        <!-- <th> {{ 'Commentary' | translate }}</th> -->
         
     </tr>
 </thead>
@@ -53,7 +53,7 @@
         <td> {{ client.num_telephone }} </td>
         <td> {{ client.email }} </td>
         <td> {{ client.entreprise}} </td>
-        <td> {{ client.commentaire}} </td>
+        <!-- <td> {{ client.commentaire}} </td> -->
         
         <td class="exclude-from-pdf">
             <button (click)="updateClient(client.id_Client)"class= "btn btn-success">{{ 'Update' | translate }}</button>

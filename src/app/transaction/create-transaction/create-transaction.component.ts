@@ -73,5 +73,9 @@ goToTransactionList(){
     console.log('Selected product:', this.selectedProduct);
   }
 
+  navigateToBackToList(){
+    this.router.navigate(['transactions']);
+   }
+
 
 }

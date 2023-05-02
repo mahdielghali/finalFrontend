@@ -13,7 +13,7 @@
         </span>
         {{ 'Download' | translate }}</button>
 
-<h1 style="font-size: 200%; width: 150%; margin-top: 50px;"> {{ 'Product list' | translate }} </h1>
+<h1 style="font-size: 200%; width: 150%; margin-top: 20px;"> {{ 'Product list' | translate }} </h1>
 <br>
 <button (click)="navigateToCreateProduitInterface()" type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#kt_modal_add_user">
     
@@ -43,7 +43,7 @@
         <th> {{ 'Product Code' | translate }}</th>
         <th> {{ 'Category' | translate }} </th>
         <th> {{ 'Price' | translate }} </th>
-        <th> {{ 'Description' | translate }} </th>
+        <!-- <th> {{ 'Description' | translate }} </th> -->
         
         
     </tr>
@@ -54,7 +54,7 @@
         <td> {{ produit.code_produit }} </td>
         <td> {{ produit.categorie }} </td>
         <td> {{ produit.prix }} </td>
-        <td> {{ produit.description }} </td>
+        <!-- <td> {{ produit.description }} </td> -->
         
         
         <td class="exclude-from-pdf">

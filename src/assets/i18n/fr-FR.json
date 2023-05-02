@@ -69,6 +69,18 @@
   "Date added":"Date d'ajout",
   "Transaction list":"Liste des transactions",
   "Product list":"Liste de produits",
-  "Client list":"Liste de clients"
+  "Client list":"Liste de clients",
+  "Password is required":"Mot de passe requis",
+  "Password must be at least 6 characters":"Le mot de passe doit comporter au moins 6 caractères",
+  "Login failed:":"Échec de connexion:",
+  "Logged in as":"Connecté en tant que",
+  "Username is required!":"Nom d'utilisateur est nécessaire!",
+  "Username must be at least 3 characters":"Le nom d’utilisateur doit comporter au moins 3 caractères",
+  "Username must be at most 20 characters":"Le nom d’utilisateur doit compter au plus 20 caractères",
+  "Email is required":"Le courriel est requis",
+  "Email must be a valid email address":"Le courriel doit être une adresse courriel valide",
+  "Signup failed!":"L’inscription a échoué !",
+  "Your registration is successful!":"Votre inscription est réussie!",
+  "Back To List":"Retour à la liste"
 
 }

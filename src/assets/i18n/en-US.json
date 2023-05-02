@@ -70,7 +70,19 @@
   "Date added":"Date added",
   "Transaction list":"Transaction list",
   "Product list":"Product list",
-  "Client list":"Client list"
+  "Client list":"Client list",
+  "Password is required":"Password is required",
+  "Password must be at least 6 characters":"Password must be at least 6 characters",
+  "Login failed:":"Login failed:",
+  "Logged in as":"Logged in as",
+  "Username is required!":"Username is required!",
+  "Username must be at least 3 characters":"Username must be at least 3 characters",
+  "Username must be at most 20 characters":"Username must be at most 20 characters",
+  "Email is required":"Email is required",
+  "Email must be a valid email address":"Email must be a valid email address",
+  "Signup failed!":"Signup failed!",
+  "Your registration is successful!":"Your registration is successful!",
+  "Back To List":"Back To List"
   
   
 

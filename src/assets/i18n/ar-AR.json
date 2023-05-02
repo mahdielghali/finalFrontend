@@ -69,5 +69,17 @@
   "Date added":"تاريخ الإضافة",
   "Transaction list":"قائمة المعاملات",
   "Product list":"قائمة المنتجات",
-  "Client list":"قائمة العملاء"
+  "Client list":"قائمة العملاء",
+  "Password is required":"كلمة المرور مطلوبة",
+  "Password must be at least 6 characters":"يجب أن تكون كلمة المرور 6 أحرف على الأقل",
+  "Login failed:":"فشل تسجيل الدخول:",
+  "Logged in as":"مسجل الدخول ك",
+  "Username is required!":"اسم المستخدم مطلوب!",
+  "Username must be at least 3 characters":"يجب أن يكون اسم المستخدم 3 أحرف على الأقل",
+  "Username must be at most 20 characters":"يجب أن يكون اسم المستخدم 20 حرفًا على الأكثر",
+  "Email is required":"البريد الإلكتروني مطلوب",
+  "Email must be a valid email address":"يجب أن يكون البريد الإلكتروني عنوان بريد إلكتروني صالحًا",
+  "Signup failed!":"الاشتراك فشل!",
+  "Your registration is successful!":"تسجيلك ناجح!",
+  "Back To List":"العودة إلى القائمة"
 }

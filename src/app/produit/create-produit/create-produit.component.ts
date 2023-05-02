@@ -39,6 +39,10 @@ goToProduitList(){
     
   }
 
+  navigateToBackToList(){
+    this.router.navigate(['produits']);
+   }
+
 
 
 }

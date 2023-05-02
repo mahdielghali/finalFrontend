@@ -1,6 +1,6 @@
 
 <div class ="col-md-6 offset-md-3">
-    <h1 style="font-size: 200%; width: 150%; margin-top: 50px;">{{ 'Create Transaction' | translate }} </h1>
+    <h1 style="font-size: 200%; width: 150%; margin-top: 20px;">{{ 'Create Transaction' | translate }} </h1>
   <form (ngSubmit)="onSubmit()">
 
     <label for="name">{{ 'Transaction type' | translate }}</label>
@@ -17,12 +17,12 @@
       </div>
   </div>
   <br>
-    <br>
 
     <div class="form-group">
         <label for="name">{{ 'Product' | translate }}</label>
         <input type="text" class="form-control" id="produit" required [(ngModel)]="transaction.produit" name="produit">
       </div>
+      <br>
 
       <div class="form-group">
         <label for="name">{{ 'Client' | translate }}</label>
@@ -44,12 +44,14 @@
               </select>
           </div>
       </div>
+      <br>
       
 
       <div class="form-group">
         <label for="name">{{ 'Amount' | translate }}</label>
         <input type="text" class="form-control" id="montant" required [(ngModel)]="transaction.montant" name="montant">
       </div>
+      <br>
 
       
         <label for="name">{{ 'Transaction status' | translate }} </label>
@@ -67,8 +69,15 @@
       </div>
       <br>
 
+      <div class="form-group">
+        <label for="name">{{ 'Date added' | translate }}</label>
+        <input type="text" class="form-control" id="date_ajout" required [(ngModel)]="transaction.date_ajout" name="date_ajout">
+      </div>
+      <br>
+
     
 
-    <button type="submit" class="btn btn-success">{{ 'Submit' | translate }}</button>
+    <button type="submit" class="btn btn-success text-center">{{ 'Submit' | translate }}</button>
+    <button (click)="navigateToBackToList()"class= "btn btn-white ml-5" >{{ 'Back To List' | translate }}</button>
   </form>
 </div>
