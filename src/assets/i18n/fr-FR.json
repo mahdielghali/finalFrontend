@@ -65,6 +65,10 @@
   "Are you sure you want to delete this product ?":"Êtes-vous sûr de vouloir supprimer ce produit ?",
   "Are you sure you want to delete this transaction ?":"Êtes-vous sûr de vouloir supprimer cette transaction ?",
   "Yes":"Oui",
-  "No":"Non"
+  "No":"Non",
+  "Date added":"Date d'ajout",
+  "Transaction list":"Liste des transactions",
+  "Product list":"Liste de produits",
+  "Client list":"Liste de clients"
 
 }

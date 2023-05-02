@@ -65,5 +65,9 @@
   "Are you sure you want to delete this product ?":"هل أنت متأكد من أنك تريد حذف هذا المنتج ؟",
   "Are you sure you want to delete this transaction ?":"هل أنت متأكد من أنك تريد حذف هذه المعاملة ؟",
   "Yes":"نعم",
-  "No":"لا"
+  "No":"لا",
+  "Date added":"تاريخ الإضافة",
+  "Transaction list":"قائمة المعاملات",
+  "Product list":"قائمة المنتجات",
+  "Client list":"قائمة العملاء"
 }
