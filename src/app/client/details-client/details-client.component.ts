@@ -27,7 +27,7 @@ export class DetailsClientComponent implements OnInit{
   }
 
   navigateToBackToList(){
-    this.router.navigate(['produits']);
+    this.router.navigate(['clients']);
    }
 
 

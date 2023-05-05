@@ -45,7 +45,7 @@ onChangeSalutationClient(event: Event) {
   }
 
   navigateToBackToList(){
-    this.router.navigate(['produits']);
+    this.router.navigate(['clients']);
    }
 
 }

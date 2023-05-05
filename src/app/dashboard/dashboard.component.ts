@@ -135,8 +135,6 @@ export class DashboardComponent {
         console.error('Could not get 2D context for canvas element.');
       }
     }}
-     
-    
-    
+       
 
-
+    
