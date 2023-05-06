@@ -1,11 +1,19 @@
-<div class="col-md-12">
-  <div class="card card-container">
-    <div class="card">
-    <img
-      id="profile-img"
-      src="//ssl.gstatic.com/accounts/ui/avatar_2x.png"
-      class="profile-img-card"
-    />
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+</head>
+
+<h3 class="h3">Create your account</h3>
+<h1 class="h1">Sign up in just a few seconds! </h1>
+<img
+id="profile-img"
+src="https://cdn-icons-png.flaticon.com/512/1179/1179403.png?w=740&t=st=1683407668~exp=1683408268~hmac=727a17f5e60702a2e7be7b27bfdb3843cc51d6048a3a7575883caa2e3fc27314"
+class="profile-img"
+/>
+
+
+ 
+    
+   
     <form
       *ngIf="!isSuccessful"
       name="form"
@@ -14,7 +22,10 @@
       novalidate
     >
      <br>
+     <div class="all-card">
      <div class="form-group">
+      <h1>User Sign in</h1>
+      <br>
       <label class="label" for="username">{{ 'Username' | translate }}</label>
       <div class="input-group">
         <div class="input-group-prepend">
@@ -39,6 +50,9 @@
       <div class="form-group">
         <label for="email">{{ 'Email' | translate }}</label>
         <div class="input-group">
+          <div class="input-group-append">
+            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+          </div>
           <input
             type="email"
             class="form-control"
@@ -49,9 +63,7 @@
             #email="ngModel"
             [ngClass]="{ 'is-invalid': f.submitted && email.errors }"
           />
-          <div class="input-group-append">
-            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
-          </div>
+         
         </div>
         <div class="invalid-feedback" *ngIf="email.errors && f.submitted">
           <div *ngIf="email.errors['required']">{{'Email is required'| translate}}</div>
@@ -83,6 +95,7 @@
       <div class="form-group">
         <button class="btn btn-primary btn-block">{{ 'Sign in' | translate }}</button>
       </div>
+    </div>
 
       <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
         {{'Signup failed!'| translate}}<br />{{ errorMessage }}
@@ -92,8 +105,8 @@
     <div class="alert alert-success" *ngIf="isSuccessful">
       {{'Your registration is successful!'| translate}}
     </div>
-  </div>
-</div>
-</div>
+  
+
+
 
 

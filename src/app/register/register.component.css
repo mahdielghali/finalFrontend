@@ -55,8 +55,12 @@ box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 position: relative;
 opacity: 0.8;
   
+}
 
-
+.all-card {
+  margin: 0 auto;
+  width: 35%;
+  margin-top:30px;
 }
 
 .label{
@@ -64,16 +68,21 @@ opacity: 0.8;
 }
 
 .h3{
-  margin-top: 2%;
-  margin-left: 30%;
+  margin-top: 10%;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: bold;
   font-size: 2em;
   font-family: "Lato", sans-serif;
+  display: block;
+  text-align: center;
 }
+
 
 .h1{
   font-size: 1em;
-  margin-left: 32%;
+  margin-left: auto;
+  text-align: center;
 }
 
 
@@ -82,12 +91,12 @@ opacity: 0.8;
   margin-top: 20px;
 }
 
-.profile-img-card {
+.profile-img {
   width: 96px;
   height: 96px; 
   margin: 0 auto 10px;
   display: block;
-  border-radius: 50%;
+ 
   margin-top: 50px;
   
 }
@@ -180,7 +189,7 @@ opacity: 0.8;
 .btn-primary {
   background-color: #007bff;
 border-color: #007bff;
-background-image: linear-gradient(to right, #91c3ce, #ddb4d6, #cf7ed2);
+background-image: linear-gradient(to right, #93d5e4, #ddb4d6, #cf7ed2);
 color: #fff;
 
   
