@@ -38,8 +38,10 @@
 
 .delete-buttons button#delete-yes {
   background-color: #f00;
+  margin-left: 20px;
 }
 
 .delete-buttons button#delete-no {
   background-color: #ccc;
+  margin-left: 20px;
 }
