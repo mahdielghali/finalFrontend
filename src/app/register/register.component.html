@@ -2,17 +2,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
 </head>
 
-<h3 class="h3">Create your account</h3>
-<h1 class="h1">Sign up in just a few seconds! </h1>
+<h3 class="h3">{{'Create your account'| translate}}</h3>
+<h1 class="h1">{{'Sign up in just a few seconds!'| translate}} </h1>
 <img
 id="profile-img"
 src="https://cdn-icons-png.flaticon.com/512/1179/1179403.png?w=740&t=st=1683407668~exp=1683408268~hmac=727a17f5e60702a2e7be7b27bfdb3843cc51d6048a3a7575883caa2e3fc27314"
 class="profile-img"
 />
 
-
- 
-    
    
     <form
       *ngIf="!isSuccessful"
@@ -24,7 +21,7 @@ class="profile-img"
      <br>
      <div class="all-card">
      <div class="form-group">
-      <h1>User Sign in</h1>
+      <h1>{{'User registration'| translate}}</h1>
       <br>
       <label class="label" for="username">{{ 'Username' | translate }}</label>
       <div class="input-group">

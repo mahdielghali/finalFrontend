@@ -81,5 +81,16 @@
   "Email must be a valid email address":"يجب أن يكون البريد الإلكتروني عنوان بريد إلكتروني صالحًا",
   "Signup failed!":"الاشتراك فشل!",
   "Your registration is successful!":"تسجيلك ناجح!",
-  "Back To List":"العودة إلى القائمة"
+  "Back To List":"العودة إلى القائمة",
+  "Welcome to FRS":"مرحبًا في FRS",
+  "Login for making the right decision.":"قم بتسجيل الدخول لاتخاذ القرار الصحيح.",
+  "User Login":"تسجيل دخول المستخدم",
+  "Create your account":"أنشئ حسابك",
+  "Sign up in just a few seconds!":"سجل في بضع ثوان !",
+  "User registration":"تسجيل المستخدم",
+  "Oops! Page not found":"عذرًا! الصفحة غير موجودة",
+  "The page you are looking for might have been removed, had its name changed or is temporarily unavailable.":"ربما تمت إزالة الصفحة التي تبحث عنها أو تغير اسمها أو أنها غير متاحة مؤقتًا.",
+  "Go to home page":"اذهب إلى الصفحة الرئيسية",
+  "Dashboard":"لوحة المعلومات",
+  "Dashboard Details":"تفاصيل لوحة المعلومات"
 }
