@@ -25,6 +25,7 @@ import { CreateTransactionComponent } from './transaction/create-transaction/cre
 import { DetailsProduitComponent } from './produit/details-produit/details-produit.component';
 import { DetailsTransactionComponent } from './transaction/details-transaction/details-transaction.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ErrorsComponent } from './errors/errors.component';
 
 
 
@@ -57,6 +58,7 @@ const routes: Routes = [
   { path: 'detailsProduit/:id', component: DetailsProduitComponent },
   { path: 'detailsTransaction/:id', component: DetailsTransactionComponent },
   { path : 'Dashboard', component: DashboardComponent },
+  { path : '**', component: ErrorsComponent },
   
   
   { path: '', redirectTo: 'home', pathMatch: 'full' }

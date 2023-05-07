@@ -33,6 +33,7 @@ import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { DashboardComponent } from './dashboard/dashboard.component';
+import { ErrorsComponent } from './errors/errors.component';
 
 
 
@@ -67,7 +68,8 @@ export function createTranslateLoader(http: HttpClient) {
     DetailsClientComponent,
     DetailsProduitComponent,
     DetailsTransactionComponent,
-    DashboardComponent
+    DashboardComponent,
+    ErrorsComponent
 
     
   
