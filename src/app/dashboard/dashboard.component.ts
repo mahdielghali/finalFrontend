@@ -3,6 +3,8 @@ import { TransactionService } from '../_services/transaction.service';
 import { DashboardService } from '../_services/dashboard.service';
 import Chart from 'chart.js/auto';
 
+
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -96,16 +98,18 @@ export class DashboardComponent {
       }
 
 
-    getChart(){
+      async getChart() {
+      
+        await this.getNbClient();
       const canvas = document.getElementById('myChart') as HTMLCanvasElement;
       const ctx = canvas.getContext('2d');
       if (ctx) {
-        this.chart = new Chart(ctx, { type: 'bar',
+        const chart = new Chart(ctx, { type: 'bar',
         data: {
           labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
           datasets: [{
             label: 'Sales',
-            data: [12, 19, 3, 5, 2, 3, 15],
+            data: [this.getNbClient, 19, 3, 5, 2, 3, 15],
             backgroundColor: [
               'rgba(255, 99, 132, 0.2)',
               'rgba(54, 162, 235, 0.2)',
@@ -134,7 +138,9 @@ export class DashboardComponent {
       else {
         console.error('Could not get 2D context for canvas element.');
       }
-    }}
+    }
+  }
+
        
 
     
