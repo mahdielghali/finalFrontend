@@ -13,6 +13,12 @@ opacity: 0.8;
 
 }
 
+.inline-block {
+  display: inline-block;
+  margin-top: 4%;
+}
+
+
 .label{
   font-weight: bold;
 }

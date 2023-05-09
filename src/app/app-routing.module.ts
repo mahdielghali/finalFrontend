@@ -26,6 +26,7 @@ import { DetailsProduitComponent } from './produit/details-produit/details-produ
 import { DetailsTransactionComponent } from './transaction/details-transaction/details-transaction.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ErrorsComponent } from './errors/errors.component';
+import { AuthGuardService } from './_services/auth-guard.service';
 
 
 
@@ -70,3 +71,6 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+// , canActivate : [AuthGuardService] 

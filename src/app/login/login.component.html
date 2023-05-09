@@ -141,6 +141,8 @@
         <button class="btn btn-primary btn-block">
           {{ 'Login' | translate }}
         </button>
+        <p class="inline-block">{{'Don\'t have an account?'| translate}}</p>
+        <a href="/register" class="inline-block">{{'Go to register page'| translate}}</a>
       </div>
       <div class="form-group">
         <div *ngIf="f.submitted && isLoginFailed" class="alert alert-danger" role="alert">
