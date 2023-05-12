@@ -45,12 +45,12 @@ export class DashboardService {
   }
 
   getTransactionLastMonth(){
-    return this.http.get<number>(`http://localhost:8080/transaction/lastday`);
+    return this.http.get<number>(`http://localhost:8080/transaction/lastmonth`);
 
   }
 
   getTransactionLastYear(){
-    return this.http.get<number>(`http://localhost:8080/transaction/lastday`);
+    return this.http.get<number>(`http://localhost:8080/transaction/lastyear`);
 
   }
 }

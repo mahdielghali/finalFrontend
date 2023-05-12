@@ -20,7 +20,10 @@ export class DashboardComponent {
   totalM:any;
   totalY:any;
   chart: Chart | null = null;
+  ctx:any;
+  chart1:any=null;
 
+  
   constructor(private dashboardService: DashboardService){
 
   }
@@ -33,9 +36,32 @@ export class DashboardComponent {
     this.getTransactionLastDay();
     this.getTransactionLastMonth();
     this.getTransactionLastYear();
-    this.getChart()
+    // this.getChart()
 
-    
+     const canvas = document.getElementById('myChart') as HTMLCanvasElement;
+         this.ctx = canvas.getContext('2d');
+          if (this.ctx) {
+             this.chart1 = new Chart(this.ctx, { type: 'bar',
+            data: {
+              labels: [''],
+              datasets: [{
+                label: 'Sales',
+                data: [0],
+                backgroundColor: [
+                  'rgba(54, 162, 235, 0.2)',
+                ],
+                borderColor: [
+                  'rgba(54, 162, 235, 1)',
+                ],
+                borderWidth: 1
+              }]
+            }
+           
+          });
+        }
+          else {
+            console.error('Could not get 2D context for canvas element.');
+          }
     
   }
 
@@ -96,6 +122,55 @@ export class DashboardComponent {
       });
       
       }
+
+
+      getLastDay(){
+        this.dashboardService.getTransactionLastDay().subscribe((numberToday)=>{
+          let weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+
+          let d = new Date();
+          let day = weekday[d.getDay()];
+          this.updateChart(numberToday,day)
+        })
+      }
+      
+      getLastMonth(){
+        this.dashboardService.getTransactionLastMonth().subscribe((numberToday)=>{
+          let month = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+
+          let d = new Date();
+          let monthName = month[d.getMonth()];
+          this.updateChart(numberToday,monthName)
+        })
+      }
+
+      getLastYear(){
+        this.dashboardService.getTransactionLastYear().subscribe((numberToday)=>{
+          this.updateChart(numberToday,(new Date().getFullYear()).toString())
+        })
+      }
+
+      updateChart(numberToday:number,label:string=""){
+        this.chart1.destroy()
+          this.chart1 = new Chart(this.ctx, { type: 'bar',
+          data: {
+            labels: [label],
+            datasets: [{
+              label: 'Sales',
+              data: [numberToday],
+              backgroundColor: [
+                'rgba(54, 162, 235, 0.2)',
+              ],
+              borderColor: [
+                'rgba(54, 162, 235, 1)',
+              ],
+              borderWidth: 1
+            }]
+          }
+         
+        });
+      }
+
 
 
       async getChart() {
